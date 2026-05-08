@@ -1,2 +1,0 @@
-info: Server is running on port 5000
-info: Connected to MongoDB successfully
