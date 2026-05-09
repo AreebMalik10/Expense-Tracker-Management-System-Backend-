@@ -58,4 +58,30 @@ export const login = async (req, res) => {
         logger.error('Error in login', err);
         res.status(500).json({ success: false, message: 'Internal Server Error' });
     }
+};
+
+export const logout = (req, res) => {
+    try {
+        res.clearCookie('token');
+        res.status(200).json({ success: true, message: 'Logout successful' });
+    } catch (err) {
+        logger.error('Error in logout', err);
+        res.status(500).json({ success: false, message: 'Internal Server Error' });
+    }
+}
+
+export const getProfile = async (req, res) => {
+    try {
+        const user = await User.findById(req.user.userId).select('-password');
+
+        if (!user) {
+            return res.status(404).json({ success: false, message: 'User not found' });
+        }
+
+        res.status(200).json({ success: true, user });
+
+    } catch (err) {
+        logger.error('Error in getProfile', err);
+        res.status(500).json({ success: false, message: 'Internal Server Error' });
+    }
 }
