@@ -22,7 +22,7 @@ export const createCategory = async (req, res) => {
         res.status(201).json({ success: true, message: 'Category created successfully', category });
          
     } catch (err) {
-        logger.error('Error in createCategory', err);
+        Logger.error('Error in createCategory', err);
         res.status(500).json({ success: false, message: 'Internal Server Error' });
     }
 };
@@ -33,7 +33,7 @@ export const getCategories = async (req, res) => {
         res.status(200).json({ success: true, categories });
 
     } catch (err) {
-        logger.error('Error in getCategories:', err);
+        Logger.error('Error in getCategories:', err);
         res.status(500).json({ success: false, message: 'Internal Server Error' });
     }
 };
@@ -56,7 +56,7 @@ export const updateCategory = async (req, res) => {
         res.status(200).json({ success: true, message: 'Category updated successfully', category });
 
     } catch (err) {
-        logger.error('Error in updateCategory', err);
+        Logger.error('Error in updateCategory', err);
         res.status(500).json({ success: false, message: 'Internal Server Error' });
     }
 };
@@ -73,7 +73,7 @@ export const deleteCategory = async (req, res) => {
         res.status(200).json({ success: true, message: 'Category deleted successfully' });
 
     } catch (err) {
-        logger.error('Error in deleteCategory:', err);
+        Logger.error('Error in deleteCategory:', err);
         res.status(500).json({ success: false, message: 'Internal Server Error' });
     }
 }

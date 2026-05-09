@@ -6,6 +6,8 @@ import dotenv from 'dotenv';
 import authRoutes from './src/routes/auth.routes.js';
 import requestLogger from './src/middleware/requestLogger.js';
 import cookieParser from 'cookie-parser';
+import categoryRoutes from './src/routes/category.routes.js';
+import transactionRoutes from './src/routes/transaction.routes.js';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -18,6 +20,8 @@ app.use(cookieParser());
 app.use(requestLogger);
 
 app.use('/api/auth', authRoutes);
+app.use('/api/categories', categoryRoutes);
+app.use('/api/transactions', transactionRoutes);
 
 app.get('/', (req, res) => {
     res.send('Backend is running');
