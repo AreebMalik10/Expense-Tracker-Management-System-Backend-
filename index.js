@@ -3,13 +3,19 @@ import mongoose from 'mongoose';
 import logger from './src/config/logger.js';
 import connectDB from './src/config/db.js';
 import dotenv from 'dotenv';
-
+import authRoutes from './src/routes/auth.routes.js';
+import requestLogger from './src/middleware/requestLogger.js';
+import cookieParser from 'cookie-parser';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 dotenv.config();    
 
 app.use(express.json());
+
+app.use(cookieParser());
+
+app.use(requestLogger);
 
 app.use('/api/auth', authRoutes);
 

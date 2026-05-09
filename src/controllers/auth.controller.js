@@ -1,6 +1,7 @@
 import logger from '../config/logger.js';
 import User from '../models/user.model.js';
-import bcypt from 'bcryptjs';
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
 
 export const register = async (req, res) => {
     try {
@@ -19,7 +20,7 @@ export const register = async (req, res) => {
         res.status(201).json({success: true, message: 'User registered successfully'});
 
     } catch (err) {
-        logger.error('Error in register', err);
+        logger.error('Error in register:', err);
         res.status(500).json({success: false, message: 'Internal Server Error'})
     }
 };
@@ -38,6 +39,18 @@ export const login = async (req, res) => {
         if (!isMatch) {
             return res.status(400).json({ success: false, message: 'Invalid credentials' });
         }
+
+        const token = jwt.sign(
+            { userId : user._id, email : user.email},
+            process.env.JWT_SECRET,
+            { expiresIn : '30m'}
+        )
+
+        res.cookie('token', token, {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === 'production',
+            maxAge: 30 * 60 * 1000, // 30 minutes
+        })
 
         res.status(200).json({ success: true, message: 'Login successful' });
 

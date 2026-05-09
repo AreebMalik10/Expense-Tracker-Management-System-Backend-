@@ -1,41 +1,8 @@
-info: Server is running on port 5000
-info: Connected to MongoDB successfully
-info: Server is running on port 5000
-info: Connected to MongoDB successfully
-info: Server is running on port 5000
-info: Connected to MongoDB successfully
-info: Server is running on port 5000
-info: Connected to MongoDB successfully
-info: Server is running on port 5000
-info: Connected to MongoDB successfully
-info: Server is running on port 5000
-info: Connected to MongoDB successfully
-info: Server is running on port 5000
-info: Connected to MongoDB successfully
-info: Server is running on port 5000
-info: Connected to MongoDB successfully
-info: Server is running on port 5000
-info: Connected to MongoDB successfully
-info: Server is running on port 5000
-info: Connected to MongoDB successfully
-info: Server is running on port 5000
-info: Connected to MongoDB successfully
-info: Server is running on port 5000
-info: Connected to MongoDB successfully
-info: Server is running on port 5000
-info: Connected to MongoDB successfully
-info: Server is running on port 5000
-info: Connected to MongoDB successfully
-info: Server is running on port 5000
-info: Connected to MongoDB successfully
-info: Server is running on port 5000
-info: Connected to MongoDB successfully
-info: Server is running on port 5000
-info: Connected to MongoDB successfully
-info: Server is running on port 5000
-info: Connected to MongoDB successfully
-info: Server is running on port 5000
-info: Connected to MongoDB successfully
+info: POST /api/auth/register | Payload : {"fullName":"Muhammad Areeb","email":"areeb9273@gmail.com","password":"Areeb@123"}
+info: API Response for POST /api/auth/register : {"message":"User already exists"}
+info: POST /api/auth/login | Payload : {"email":"areeb9273@gmail.com","password":"Areeb@123"}
+info: API Response for POST /api/auth/login : {"success":true,"message":"Login successful"}
+info: Login successful for user: areeb9273@gmail.com
 info: Server is running on port 5000
 info: Connected to MongoDB successfully
 info: Server is running on port 5000

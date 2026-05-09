@@ -1,0 +1,2 @@
+error: Error in register bcrypt is not defined {"stack":"ReferenceError: bcrypt is not defined\n    at register (file:///C:/ExpenseTrackerSystem/Backend/src/controllers/auth.controller.js:14:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"}
+error: Error in register bcrypt is not defined {"stack":"ReferenceError: bcrypt is not defined\n    at register (file:///C:/ExpenseTrackerSystem/Backend/src/controllers/auth.controller.js:14:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)"}
