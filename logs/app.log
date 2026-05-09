@@ -13,3 +13,13 @@ info: Server is running on port 5000
 info: Connected to MongoDB successfully
 info: DELETE /api/transactions/1 | Payload : {"type":"expense","amount":10000,"title":"Commitee"}
 info: API Response for DELETE /api/transactions/1 : {"success":false,"message":"Unauthorized"}
+info: Server is running on port 5000
+info: Connected to MongoDB successfully
+info: Server is running on port 5000
+info: Connected to MongoDB successfully
+info: Server is running on port 5000
+info: Connected to MongoDB successfully
+info: Server is running on port 5000
+info: Connected to MongoDB successfully
+info: Server is running on port 5000
+info: Connected to MongoDB successfully
